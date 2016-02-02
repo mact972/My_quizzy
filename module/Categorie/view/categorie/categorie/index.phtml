@@ -1,0 +1,22 @@
+<?php
+$title = 'Choisissez une catégorie';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<a href="../histoire/theme"><img src="../img/histoire.jpg" alt="histoire" class="img-thumbnail" title="histoire"></a>
+<a href="../film/theme"><img src="../img/cinema.jpg" alt="cinema" class="img-thumbnail" title="cinema"></a>
+<a href="<?php echo $this->url('acteur',
+             array('action'=>'index'));?>"><img src="../img/acteur.jpg" alt="acteur" class="img-thumbnail" title="acteur"></a>
+<a href="<?php echo $this->url('nature',
+             array('action'=>'index'));?>"><img src="../img/nature.jpg" alt="nature" class="img-thumbnail" title="nature"></a>
+<a href="<?php echo $this->url('religion',
+             array('action'=>'index'));?>"><img src="../img/religion.jpg" alt="religion" class="img-thumbnail" title="religion"></a>
+<a href="<?php echo $this->url('histoire',
+             array('action'=>'index'));?>"><img src="../img/cultureg.jpg" alt="culture" class="img-thumbnail" title="culture générale"></a>
+<a href="<?php echo $this->url('histoire',
+             array('action'=>'index'));?>"><img src="../img/capital.jpg" alt="capital" class="img-thumbnail" title="capital"></a>
+<a href="<?php echo $this->url('histoire',
+             array('action'=>'index'));?>"><img src="../img/sport.jpg" alt="sport" class="img-thumbnail" title="sport"></a>
+<a href="<?php echo $this->url('histoire',
+             array('action'=>'index'));?>"><img src="../img/informatique.jpg" alt="informatique" class="img-thumbnail" title="informatique"></a>

@@ -1,0 +1,33 @@
+<?php
+ $title = 'Votre Qcm';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+ <table class="table">
+ <tr>
+     <th>Question</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php foreach ($qcms as $qcm) : ?>
+ <tr>
+     <td><?php echo $this->escapeHtml($qcm->question);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Réponse : </h5></td>
+ 	<td>n°1/ <?php echo $this->escapeHtml($qcm->prop1);?></td>
+	<td>n°2/ <?php echo $this->escapeHtml($qcm->prop2);?></td>
+ 	<td>n°3/ <?php echo $this->escapeHtml($qcm->prop3);?></td>
+ 	<td>n°4/ <?php echo $this->escapeHtml($qcm->prop4);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Votre réponse : </h5></td>
+ 	<td><input type="text"></td>
+ </tr>
+
+ <?php endforeach; ?>
+ 
+ </table> 

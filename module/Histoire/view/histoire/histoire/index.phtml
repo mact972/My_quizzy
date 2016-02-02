@@ -1,0 +1,38 @@
+<?php
+ $title = 'QCM Histoire';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ 
+
+ <table class="table">
+ <tr>
+     <th>Question</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php foreach ($histoires as $histoire) : ?>
+
+ 		<?php if( $this->escapeHtml($histoire->categorie == "Histoire" )) : ?>
+
+ <tr>
+     <td><?php echo $this->escapeHtml($histoire->question);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Réponse : </h5></td>
+ 	<td>n°1/ <?php echo $this->escapeHtml($histoire->prop1);?></td>
+	<td>n°2/ <?php echo $this->escapeHtml($histoire->prop2);?></td>
+ 	<td>n°3/ <?php echo $this->escapeHtml($histoire->prop3);?></td>
+ 	<td>n°4/ <?php echo $this->escapeHtml($histoire->prop4);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Votre réponse : </h5></td>
+ 	<td><input type="text"></td>
+ </tr>
+
+ 	<?php endif; ?>
+
+ <?php endforeach; ?>
+ 
+ </table> 

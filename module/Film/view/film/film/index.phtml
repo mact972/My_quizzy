@@ -1,0 +1,38 @@
+<?php
+$title = 'QCM Film';
+$this->headTitle($title);
+?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ 
+ <table class="table">
+ <tr>
+     <th>Question</th>
+     <th>&nbsp;</th>
+ </tr>
+
+ <?php foreach ($films as $film) : ?>
+ 
+ 		<?php if( $this->escapeHtml($film->categorie == "Films" )) : ?>
+
+ <tr>
+     <td><?php echo $this->escapeHtml($film->question);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Réponse : </h5></td>
+ 	<td>n°1/ <?php echo $this->escapeHtml($film->prop1);?></td>
+	<td>n°2/ <?php echo $this->escapeHtml($film->prop2);?></td>
+ 	<td>n°3/ <?php echo $this->escapeHtml($film->prop3);?></td>
+ 	<td>n°4/ <?php echo $this->escapeHtml($film->prop4);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Votre réponse : </h5></td>
+ 	<td><input type="text"></td>
+ </tr>
+ 
+ 	<?php endif; ?>
+
+ <?php endforeach; ?>
+ 
+ </table>

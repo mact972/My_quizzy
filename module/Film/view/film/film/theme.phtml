@@ -1,0 +1,17 @@
+<?php
+$title = 'Choisissez un thème';
+ $this->headTitle($title);
+ ?>
+
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<p><a href="<?php echo $this->url('film',
+             array('action'=>'index'));?>">Action</a></p>
+<p><a href="<?php echo $this->url('film',
+             array('action'=>'index'));?>">Aventure</a></p>
+<p><a href="<?php echo $this->url('film',
+             array('action'=>'index'));?>">Horreur</a></p>
+<p><a href="<?php echo $this->url('film',
+             array('action'=>'index'));?>">Amour</a></p>
+<p><a href="<?php echo $this->url('film',
+             array('action'=>'index'));?>">Musical</a></p>

@@ -1,0 +1,40 @@
+<?php
+ $title = 'QCM Acteur';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <p>
+     <a href="<?php echo $this->url('acteur', array('action'=>'add'));?>">Add new acteur</a>
+ </p>
+
+ <table class="table">
+ <tr>
+     <th>Question</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php foreach ($acteurs as $acteur) : ?>
+
+ 		<?php if( $this->escapeHtml($acteur->categorie == "Acteurs" )) : ?>
+
+ <tr>
+     <td><?php echo $this->escapeHtml($acteur->question);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Réponse : </h5></td>
+ 	<td>n°1/ <?php echo $this->escapeHtml($acteur->prop1);?></td>
+	<td>n°2/ <?php echo $this->escapeHtml($acteur->prop2);?></td>
+ 	<td>n°3/ <?php echo $this->escapeHtml($acteur->prop3);?></td>
+ 	<td>n°4/ <?php echo $this->escapeHtml($acteur->prop4);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Votre réponse : </h5></td>
+ 	<td><input type="text"></td>
+ </tr>
+
+ 	<?php endif; ?>
+
+ <?php endforeach; ?>
+ 
+ </table> 

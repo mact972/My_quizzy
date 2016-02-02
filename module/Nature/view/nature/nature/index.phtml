@@ -1,0 +1,38 @@
+<?php
+ $title = 'QCM Nature';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+
+ <table class="table">
+ <tr>
+     <th>Question</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php foreach ($natures as $nature) : ?>
+
+ 		<?php if( $this->escapeHtml($nature->categorie == "Nature" )) : ?>
+
+ <tr>
+     <td><?php echo $this->escapeHtml($nature->question);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Réponse : </h5></td>
+ 	<td>n°1/ <?php echo $this->escapeHtml($nature->prop1);?></td>
+	<td>n°2/ <?php echo $this->escapeHtml($nature->prop2);?></td>
+ 	<td>n°3/ <?php echo $this->escapeHtml($nature->prop3);?></td>
+ 	<td>n°4/ <?php echo $this->escapeHtml($nature->prop4);?></td>
+ </tr>
+
+ <tr>
+ 	<td><h5>Votre réponse : </h5></td>
+ 	<td><input type="text"></td>
+ </tr>
+
+ 	<?php endif; ?>
+
+ <?php endforeach; ?>
+ 
+ </table> 
